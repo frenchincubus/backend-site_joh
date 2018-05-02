@@ -1,0 +1,4 @@
+jj_image:
+    resource: "@JJImageBundle/Resources/config/routing.yml"
+    prefix:   /
+

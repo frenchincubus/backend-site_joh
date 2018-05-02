@@ -1,0 +1,13 @@
+jj_image_homepage:
+    path:     /
+    defaults: { _controller: JJImageBundle:Image:index }
+
+jj_image_add:
+    path: /add
+    defaults:
+        _controller: JJImageBundle:Image:add
+
+jj_image_view:
+    path: /view
+    defaults:
+        _controller: JJImageBundle:Image:view
