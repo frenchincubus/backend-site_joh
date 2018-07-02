@@ -1,4 +1,7 @@
-jj_image:
-    resource: "@JJImageBundle/Resources/config/routing.yml"
+jj_core:
+    resource: "@JJCoreBundle/Resources/config/routing.yml"
     prefix:   /
 
+jj_image:
+    resource: "@JJImageBundle/Resources/config/routing.yml"
+    prefix:   /image

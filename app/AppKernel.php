@@ -18,6 +18,8 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new JJ\ImageBundle\JJImageBundle(),
+            new FOS\CKEditorBundle\FOSCKEditorBundle(),
+            new JJ\CoreBundle\JJCoreBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

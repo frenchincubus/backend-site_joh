@@ -243,7 +243,9 @@ class Image
             return;
         }
 
-        $this->url = $this->getUploadRootDir().'/'.$this->file->getClientOriginalName();
+        // $this->url = 'http://localhost/api_jj/api-jj/web/'.$this->getUploadDir().'/'.$this->file->getClientOriginalName();
+        // $this->url = 'http://localhost/api_jj/api-jj/web/'.$this->getUploadDir().'/'.$this->getId().'.jpg';
+        $this->url = $this->file->guessExtension();
     }
 
     /**
@@ -264,7 +266,7 @@ class Image
 
         $this->file->move(
             $this->getUploadRootDir(),
-            $this->id.'.'.$this->url
+            $this->url = $this->id.'.'.$this->url
         );
     }
 
@@ -292,13 +294,13 @@ class Image
     public function getUploadDir()
     {
         // On retourne le chemin relatif vers l'image pour un navigateur
-        return 'uploads\img';
+        return 'uploads/img';
     }
 
     protected function getUploadRootDir()
     {
         // On retourne le chemin relatif vers l'image pour notre code PHP
-        return 'D:\websites-projects'.'/'.$this->getUploadDir();
+        return  __DIR__.'/../../../../web/'.$this->getUploadDir();
     }
 
 }

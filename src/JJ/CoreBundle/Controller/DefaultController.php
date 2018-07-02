@@ -1,6 +1,6 @@
 <?php
 
-namespace JJ\ImageBundle\Controller;
+namespace JJ\CoreBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -8,6 +8,6 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('JJImageBundle:Default:index.html.twig');
+        return $this->render('@JJCore/layout.html.twig');
     }
 }

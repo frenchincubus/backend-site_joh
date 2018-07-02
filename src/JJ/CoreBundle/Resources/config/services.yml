@@ -1,0 +1,4 @@
+services:
+#    jj_core.example:
+#        class: JJ\CoreBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

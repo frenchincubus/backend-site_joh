@@ -1,0 +1,36 @@
+{% extends "JJCoreBundle::layout.html.twig" %}
+
+{% block title %}
+  Edition contenu - {{ parent( ) }}
+{% endblock %}
+
+{% block body %}
+  <h3>Images</h3>
+  {% if images %}
+  <table class="table table-striped">
+    <thead class="thead-light">
+      <tr>
+        <th>date</th>
+        <th>nom</th>
+        <th>contenu</th>
+        <th>catégorie</th>
+        <th>image</th>
+      </tr>
+    </thead>
+    {% for image in images %}
+    <tr>
+      <td>{{ image.date }}</td>
+      <td>{{ image.name }}</td>
+      <td>{{ image.content }}</td>
+      <td>{{ image.categorie.name }}</td>
+      <td><img src="../uploads/img/{{ image.id }}.{{ image.url }}" class="img-thumbnail"></td>
+      <td><a href="{{path('jj_image_editimage', {'id': image.id }) }}" title="modifier" class="btn btn-default"><i class="glyphicon glyphicon-edit"></i></a></td>
+      <td><a href="{{path('jj_image_deleteimage', {'id': image.id }) }}" title="supprimer" class="btn btn-default"><i class="glyphicon glyphicon-trash"></i></a></td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% endif %}
+  <h3>Concerts</h3>
+
+  <h3>Albums</h3>
+{% endblock %}

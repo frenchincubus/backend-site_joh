@@ -37,7 +37,9 @@ framework:
 twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
-   
+    form_themes:
+        - 'bootstrap_3_layout.html.twig'
+
 
 # Doctrine Configuration
 doctrine:
@@ -78,28 +80,28 @@ assetic:
     filters:
         cssrewrite: ~
         cssembed:
-            jar: "%kernel.root_dir%/Resources/java/cssembed.jar"        
+            jar: "%kernel.root_dir%/Resources/java/cssembed.jar"
             yui_js:
             jar: "%kernel.root_dir%/Resources/java/yuicompressor.jar"
         yui_css:
             jar: "%kernel.root_dir%/Resources/java/yuicompressor.jar"
         lessphp:
-            file: "%kernel.root_dir%/../vendor/oyejorge/less.php/lessc.inc.php"   
+            file: "%kernel.root_dir%/../vendor/oyejorge/less.php/lessc.inc.php"
             apply_to: ".less$"
     assets:
         jquery_js:
             inputs:
-                - "%kernel.root_dir%/../vendor/components/jquery/jquery.min.js"            
+                - "%kernel.root_dir%/../vendor/components/jquery/jquery.min.js"
             filters: [?yui_js]
             output: js/jquery.min.js
-           
+
         bootstrap_css:
             inputs:
                 - "%kernel.root_dir%/../vendor/twbs/bootstrap/less/bootstrap.less"
             filters:
                 - lessphp
                 - cssrewrite
-            output: css/bootstrap.css            
+            output: css/bootstrap.css
 
         bootstrap_js:
             inputs:
@@ -116,7 +118,7 @@ assetic:
                 - "%kernel.root_dir%/../vendor/twbs/bootstrap/js/tab.js"
                 - "%kernel.root_dir%/../vendor/twbs/bootstrap/js/transition.js"
             filters: [?yui_js]
-            output: js/bootstrap.js             
+            output: js/bootstrap.js
         fonts_glyphicons_eot:
             inputs:
                 - "%kernel.root_dir%/../vendor/twbs/bootstrap/fonts/glyphicons-halflings-regular.eot"

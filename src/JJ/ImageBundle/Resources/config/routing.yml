@@ -2,12 +2,79 @@ jj_image_homepage:
     path:     /
     defaults: { _controller: JJImageBundle:Image:index }
 
-jj_image_add:
+jj_image_addimage:
     path: /add
     defaults:
-        _controller: JJImageBundle:Image:add
+        _controller: JJImageBundle:Image:addimage
 
-jj_image_view:
-    path: /view
+jj_image_addconcert:
+    path: /addconcert
     defaults:
-        _controller: JJImageBundle:Image:view
+        _controller: JJImageBundle:Image:addconcert
+
+jj_image_adddisque:
+    path: /adddisque
+    defaults:
+        _controller: JJImageBundle:Image:addDisque
+
+jj_image_edit:
+    path: /edit
+    defaults:
+        _controller: JJImageBundle:Image:edit
+
+jj_image_viewimage:
+    path: /view_image
+    defaults:
+        _controller: JJImageBundle:View:viewImage
+
+jj_image_viewconcert:
+    path: /view_concert
+    defaults:
+        _controller: JJImageBundle:View:viewConcert
+
+jj_image_viewdisque:
+    path: /view_disque
+    defaults:
+        _controller: JJImageBundle:View:viewAlbums
+
+jj_image_editimage:
+    path: /edit_image/{id}
+    defaults:
+        _controller: JJImageBundle:Image:editImage
+        requirements:
+            id: \d+
+
+jj_image_editconcert:
+    path: /edit_concert/{id}
+    defaults:
+        _controller: JJImageBundle:Image:editConcert
+        requirements:
+            id: \d+
+
+jj_image_editdisque:
+    path: /edit_disque/{id}
+    defaults:
+        _controller: JJImageBundle:Image:editDisque
+        requirements:
+            id: \d+
+
+jj_image_deleteimage:
+    path: /delete_image/{id}
+    defaults:
+        _controller: JJImageBundle:Image:deleteImage
+        requirements:
+            id: \d+
+
+jj_image_deleteconcert:
+    path: /delete_concert/{id}
+    defaults:
+        _controller: JJImageBundle:Image:deleteConcert
+        requirements:
+            id: \d+
+
+jj_image_deletedisque:
+    path: /delete_disque/{id}
+    defaults:
+        _controller: JJImageBundle:Image:deleteDisque
+        requirements:
+            id: \d+
